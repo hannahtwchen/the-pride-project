@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Pride — collaborative group work." />
+  <title>The Pride</title>
+  <link rel="stylesheet" href="single-screen.css" />
+</head>
+<body>
+  <main class="single-screen">
+    <header class="app-title">
+      <h1>The <span>Pride</span></h1>
+      <p>Work as a Pride and take Pride in your group work!</p>
+    </header>
+
+    <section class="profile-card" aria-labelledby="maya-name">
+      <span class="adult-lion" aria-label="Maya's lion profile image"></span>
+      <div><p class="eyebrow">YOUR PROFILE</p><h2 id="maya-name">Maya Chen</h2><p class="role">Project Aurora</p></div>
+    </section>
+
+    <section class="tasks-card" aria-labelledby="team-tasks-title">
+      <div class="tasks-heading"><h2 id="team-tasks-title">Team Tasks</h2><p>Working together on one shared project.</p></div>
+      <div class="team-grid">
+        <article class="member-card current-member" aria-labelledby="maya-tasks">
+          <div class="member-title"><span class="adult-lion small" aria-hidden="true"></span><h3 id="maya-tasks">Maya</h3></div>
+          <div class="todo-item"><label class="check-control" aria-label="Mark first task complete"><input class="maya-task" type="checkbox" /><span class="checkmark" aria-hidden="true">✓</span></label><input class="task-name" type="text" value="Define the target audience" aria-label="Maya's first task" /></div>
+          <div class="todo-item"><label class="check-control" aria-label="Mark second task complete"><input class="maya-task" type="checkbox" /><span class="checkmark" aria-hidden="true">✓</span></label><input class="task-name" type="text" value="Summarize consumer spending trends" aria-label="Maya's second task" /></div>
+        </article>
+
+        <article class="member-card">
+          <div class="member-title"><span class="adult-lion small" aria-hidden="true"></span><h3>Jordan</h3></div>
+          <div class="todo-item"><label class="check-control" aria-label="Mark Jordan's first task complete"><input type="checkbox" /><span class="checkmark" aria-hidden="true">✓</span></label><input class="task-name" type="text" value="Build the interactive prototype" aria-label="Jordan's first task" /></div>
+          <div class="todo-item"><label class="check-control" aria-label="Mark Jordan's second task complete"><input type="checkbox" /><span class="checkmark" aria-hidden="true">✓</span></label><input class="task-name" type="text" value="Test the handoff flow" aria-label="Jordan's second task" /></div>
+        </article>
+
+        <article class="member-card">
+          <div class="member-title"><span class="adult-lion small" aria-hidden="true"></span><h3>Alex</h3></div>
+          <div class="todo-item"><label class="check-control" aria-label="Mark Alex's first task complete"><input type="checkbox" /><span class="checkmark" aria-hidden="true">✓</span></label><input class="task-name" type="text" value="Review team feedback" aria-label="Alex's first task" /></div>
+          <div class="todo-item"><label class="check-control" aria-label="Mark Alex's second task complete"><input type="checkbox" /><span class="checkmark" aria-hidden="true">✓</span></label><input class="task-name" type="text" value="Prepare the final presentation" aria-label="Alex's second task" /></div>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
