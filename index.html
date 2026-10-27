@@ -20,7 +20,7 @@
     </section>
 
     <section class="tasks-card" aria-labelledby="team-tasks-title">
-      <div class="tasks-heading"><h2 id="team-tasks-title">Team Tasks</h2><p>Working together on one shared project.</p></div>
+      <div class="tasks-heading"><h2 id="team-tasks-title">Team Tasks</h2><p>Complete your tasks, then pass the project cub onward.</p></div>
       <div class="team-grid">
         <article class="member-card current-member" aria-labelledby="maya-tasks">
           <div class="member-title"><span class="adult-lion small" aria-hidden="true"></span><h3 id="maya-tasks">Maya</h3></div>
@@ -28,19 +28,30 @@
           <div class="todo-item"><label class="check-control" aria-label="Mark second task complete"><input class="maya-task" type="checkbox" /><span class="checkmark" aria-hidden="true">✓</span></label><input class="task-name" type="text" value="Summarize consumer spending trends" aria-label="Maya's second task" /></div>
         </article>
 
-        <article class="member-card">
-          <div class="member-title"><span class="adult-lion small" aria-hidden="true"></span><h3>Jordan</h3></div>
+        <article class="member-card drop-zone" data-name="Jordan" tabindex="0" aria-label="Jordan's profile. Drop the project cub here.">
+          <div class="member-title"><span class="adult-lion small" aria-hidden="true"></span><h3>Jordan</h3><span class="received-cub" aria-hidden="true"></span></div>
           <div class="todo-item"><label class="check-control" aria-label="Mark Jordan's first task complete"><input type="checkbox" /><span class="checkmark" aria-hidden="true">✓</span></label><input class="task-name" type="text" value="Build the interactive prototype" aria-label="Jordan's first task" /></div>
           <div class="todo-item"><label class="check-control" aria-label="Mark Jordan's second task complete"><input type="checkbox" /><span class="checkmark" aria-hidden="true">✓</span></label><input class="task-name" type="text" value="Test the handoff flow" aria-label="Jordan's second task" /></div>
+          <p>Drop the cub here</p>
         </article>
 
-        <article class="member-card">
-          <div class="member-title"><span class="adult-lion small" aria-hidden="true"></span><h3>Alex</h3></div>
+        <article class="member-card drop-zone" data-name="Alex" tabindex="0" aria-label="Alex's profile. Drop the project cub here.">
+          <div class="member-title"><span class="adult-lion small" aria-hidden="true"></span><h3>Alex</h3><span class="received-cub" aria-hidden="true"></span></div>
           <div class="todo-item"><label class="check-control" aria-label="Mark Alex's first task complete"><input type="checkbox" /><span class="checkmark" aria-hidden="true">✓</span></label><input class="task-name" type="text" value="Review team feedback" aria-label="Alex's first task" /></div>
           <div class="todo-item"><label class="check-control" aria-label="Mark Alex's second task complete"><input type="checkbox" /><span class="checkmark" aria-hidden="true">✓</span></label><input class="task-name" type="text" value="Prepare the final presentation" aria-label="Alex's second task" /></div>
+          <p>Drop the cub here</p>
         </article>
+      </div>
+
+      <div class="handoff-area">
+        <button class="cub-dragger" type="button" draggable="true" aria-describedby="handoff-instructions">
+          <span class="project-cub" aria-hidden="true"></span><span>Project cub</span>
+        </button>
+        <p id="handoff-instructions">Finish Maya’s two tasks, then drag the project cub to Jordan or Alex.</p>
+        <p class="handoff-status" aria-live="polite"></p>
       </div>
     </section>
   </main>
+  <script src="handoff.js"></script>
 </body>
 </html>

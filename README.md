@@ -6,6 +6,6 @@ A playful, desktop-first collaboration prototype for graduate student group proj
 
 - Editable task lists for Maya, Jordan, and Alex
 - Native checkboxes for tracking group-work progress
-- Adult-lion teammate profiles and a shared-project visual identity
+- Drag-and-drop project-cub handoff from Maya to Jordan or Alex
 
-Built with HTML and CSS.
+Built with HTML, CSS, and vanilla JavaScript.

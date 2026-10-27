@@ -32,4 +32,20 @@ body { min-width:650px; min-height:100vh; margin:0; color:var(--ink); font-famil
 .task-name:hover { border-color:#e6dced; background:#fff; }
 .task-name:focus { border-color:#b893d4; background:#fff; box-shadow:0 0 0 3px #b893d42b; }
 .todo-item:has(.check-control input:checked) .task-name { color:#918593; text-decoration:line-through; }
-@media(max-width:760px) { body { min-width:0; } .single-screen { width:calc(100% - 32px); padding:35px 0; } .profile-card,.tasks-card { padding:25px; } .profile-card h2 { font-size:27px; } .team-grid { grid-template-columns:1fr; } .member-card { min-height:auto; } .tasks-heading { align-items:start; flex-direction:column; } .tasks-heading p { text-align:left; } }
+.drop-zone { position:relative; cursor:copy; outline:none; }
+.drop-zone > p { margin:14px 0 0; color:#9c8d9e; font-size:13px; font-weight:700; }
+.drop-zone:hover,.drop-zone:focus,.drop-zone.is-over { border-color:#e8a865; background:#fff8ed; transform:translateY(-2px); }
+.drop-zone.is-over { box-shadow:0 8px 20px #d98a3421; }
+.drop-zone.notified { border-color:#7bc7a6; background:#f1fbf5; }
+.drop-zone.notified > p { color:#298764; }
+.received-cub { display:none; width:30px; height:30px; margin-left:auto; border-radius:50%; background:#ffe3a1 url('baby-lion-icon.png') center/128% no-repeat; box-shadow:0 3px 9px #a863263d; }
+.drop-zone.notified .received-cub { display:block; animation:arrive .35s ease-out; }
+@keyframes arrive { from { transform:scale(.2) rotate(-20deg); opacity:0; } to { transform:scale(1) rotate(0); opacity:1; } }
+.handoff-area { display:flex; align-items:center; gap:15px; margin-top:24px; padding:16px 18px; border-radius:20px; background:#fff3df; }
+.cub-dragger { display:flex; align-items:center; gap:9px; flex:none; padding:8px 13px 8px 8px; border:0; border-radius:16px; color:#6e412f; background:#fff; box-shadow:0 4px 12px #a36d2726; font:800 14px "DM Sans",sans-serif; cursor:grab; }
+.cub-dragger:active { cursor:grabbing; }
+.cub-dragger.is-ready { box-shadow:0 0 0 3px #ffc55c,0 5px 15px #a36d2730; }
+.project-cub { display:block; width:40px; height:40px; border-radius:12px; background:#ffe3a1 url('baby-lion-icon.png') center/130% no-repeat; }
+.handoff-area p { margin:0; color:#80695e; font-size:13px; font-weight:700; }
+.handoff-status { margin-left:auto !important; color:var(--green) !important; text-align:right; }
+@media(max-width:760px) { body { min-width:0; } .single-screen { width:calc(100% - 32px); padding:35px 0; } .profile-card,.tasks-card { padding:25px; } .profile-card h2 { font-size:27px; } .team-grid { grid-template-columns:1fr; } .member-card { min-height:auto; } .drop-zone > p { margin:15px 0 0; } .tasks-heading { align-items:start; flex-direction:column; } .tasks-heading p { text-align:left; } .handoff-area { align-items:start; flex-wrap:wrap; } .handoff-status { width:100%; text-align:left; } }
